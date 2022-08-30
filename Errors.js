@@ -8,6 +8,12 @@
 
 //user-defined error
 
+//Common js way to import
+
+const { errorHandler, AllUser } = require("./errorHandler.js");
+
+AllUser();
+
 async function getData() {
   try {
     // undefined.find();
@@ -20,13 +26,6 @@ async function getData() {
     errorHandler(error);
   }
 }
-
-const errorHandler = (error) => {
-  const { name, message, stack } = error;
-  console.log(message);
-
-  //   logger.error({ name, message, stack });
-};
 
 getData();
 
